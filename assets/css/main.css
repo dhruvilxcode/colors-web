@@ -1,0 +1,33 @@
+:root {
+    --bg-color: rgb(11, 13, 24);
+}
+
+body {
+    background-color: var(--bg-color);
+    width: 100%;
+}
+
+.color {
+    height: 200px;
+    transition: 200ms;
+}
+
+.color:hover {
+    content: "aaa";
+    z-index: 99;
+    transform: scale(1.2,1.2);
+    transition: 200ms;
+    border-radius: 20px;
+    box-shadow: 0px 10px 100px 2px rgba(0,0,0,.4);
+}
+
+.color-modal {
+    display: none;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    z-index: 9999999;
+    left: 0;
+    top: 0;
+    background-color: aqua;
+}

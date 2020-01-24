@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Colors</title>
+
+    <link rel="stylesheet" href="assets/libs/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/libs/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+
+</head>
+
+<body>
+
+    <!-- colors -->
+    <div class="container">
+        <div class="row" id="colors-section">
+
+        </div>
+    </div>
+    <!-- colors -->
+
+    <div class="color-modal">
+
+    </div>
+
+
+    <!-- scripts -->
+    <script src="assets/libs/jquery/jquery.js"></script>
+    <script src="assets/libs/clipboardjs/clipboard.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            
+            $.getJSON("colors.json", function (data) {
+                var items = [];
+                
+                $.each(data.colors, function (key, val) {
+                    items.push(`<div data-clipboard-text="${val.color}" class="col-6 col-sm-4 color" style="background-color: ${val.color}" > </div>`);
+                });
+
+                $("#colors-section").html(items);
+
+                var clipboard = new ClipboardJS('.color');
+                clipboard.on('success', function(e) {
+                    console.info('Color:', e.text);
+                    
+
+                    $(".color-modal").css({
+                        "backgroundColor": e.text
+                    });
+
+                    $(".color-modal").slideDown(500, function() {
+                        $(".color-modal").slideUp();
+                    });
+
+                    e.clearSelection();
+                });
+
+                clipboard.on('error', function(e) {
+                    console.error('Action:', e.action);
+                    console.error('Trigger:', e.trigger);
+                });
+
+            });
+
+        });
+
+        function copyColor() {
+
+        }
+    </script>
+
+</body>
+
+</html>
