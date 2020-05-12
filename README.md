@@ -5,6 +5,11 @@ Amazing Color Pallete
 
 [![ko-fi](https://www.ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/V7V61GH1X)
 
-[https://colors-web.surge.sh/](https://colors-web.surge.sh/)
+[https://dhruvilxcode.github.io/colorpicker/](https://dhruvilxcode.github.io/colorpicker/)
 
-![](https://github.com/dhruvilxcode/colors-web/blob/master/Screenshot%202020-02-25%20at%2012.06.24%20AM.png?raw=true)
+
+Repository moved to 
+[https://github.com/dhruvilxcode/dhruvilxcode.github.io](https://github.com/dhruvilxcode/dhruvilxcode.github.io)
+
+
+![](https://github.com/dhruvilxcode/dhruvilxcode.github.io/blob/master/colorpicker/preview.png?raw=true)
